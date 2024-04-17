@@ -1,0 +1,22 @@
+.nav-bar {
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px black solid;
+  }
+  
+  .links {
+    margin-right: 4rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .links a {
+    color: black;
+    font-size: 1.6rem;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  

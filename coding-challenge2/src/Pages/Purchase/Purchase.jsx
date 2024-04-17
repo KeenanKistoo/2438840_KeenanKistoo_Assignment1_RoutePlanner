@@ -1,10 +1,10 @@
 import React from "react";
-import './Navbar.css'
+
 
 function Purchase(){
     return(
         <>
-            <h1>Test</h1>
+            <h1>Purchase</h1>
         </>
     );
 }
