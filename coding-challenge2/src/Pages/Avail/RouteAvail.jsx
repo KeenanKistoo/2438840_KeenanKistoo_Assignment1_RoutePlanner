@@ -8,10 +8,12 @@ function RouteAvail(){
         <>
         <section>
                 <h1 className="main-head">Public Transit Route Planner</h1>
+                <h2 className="sub-head">Available Transit Routes:</h2>
         </section>
         <section id="routes">
         {TravelData.map((td) => (
             <Routes 
+            key={td.id}
             title={td.title} 
             id={td.id}
             price={td.price}/>

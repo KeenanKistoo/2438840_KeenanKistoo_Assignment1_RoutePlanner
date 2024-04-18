@@ -1,19 +1,18 @@
 import React from "react";
 import './Routes.css';
-
+import { Link } from 'react-router-dom';
 
 function Routes(props){
-    const {title, id, price} = props;
+    const { title, id, price } = props;
+
     return(
-        <>
-        <section >
+        <section>
             <article className="route">
-                <h2 className="title">{title}</h2>
+                <Link to={`/information/${id}`} className="title">{title}</Link> {/* Update the link to include the dynamic id parameter */}
                 <p className="identifier">{'id:' + id}</p>
-                <p className="price">{'$' + price}</p>
+                <p className="price">{'R' + price}</p>
             </article>
         </section>
-        </>
     );
 }
 

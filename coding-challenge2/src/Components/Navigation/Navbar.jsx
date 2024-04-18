@@ -8,7 +8,7 @@ function Navbar(){
         <nav className="nav-bar">
             <section className="links">
                 <Link to={"/"}>Routes</Link>
-                <Link to={"/info"}/*Route information needs to be here */>Information</Link>
+                
                 <Link to={"/purchase"}><ShoppingCart size={32}/></Link>
             </section>
         </nav>

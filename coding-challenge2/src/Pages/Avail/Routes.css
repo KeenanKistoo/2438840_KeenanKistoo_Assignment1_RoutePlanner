@@ -20,7 +20,7 @@
 
 .identifier{
 text-align: right;
-margin-top: -4rem;
+margin-top: -3rem;
 margin-right: 1rem;
 color: rgb(91, 91, 91);
 
@@ -28,7 +28,7 @@ color: rgb(91, 91, 91);
 
 .price{
 font-size: 4rem;
-margin-top: 1rem;
+margin-top: 1.5rem;
 margin-left: 2rem;
 }
 
