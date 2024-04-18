@@ -1,11 +1,15 @@
 import React from "react";
 import './Info.css'
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { TicketPurchaseContext } from "../../Context/TicketPurchaseContext";
 
 function Info(props){
 
     const {id, desc, duration, stops, price} = props;
+    const {addToCart, removeFromCart, updateCart, ticketPurchase} = useContext(TicketPurchaseContext);
 
+    let itemCount = ticketPurchase[id];
     return(
         <>
         <article className="info-sect">
@@ -16,9 +20,14 @@ function Info(props){
             <p className="price-info">{"Total Price: " + "R" + price}</p>
         </article>
         <section className="input-sect">
-            <button className="change-btn">-</button>
-            <input className="input" type="text" />
-            <button className="change-btn">+</button>
+            <button className="change-btn"
+            onClick={() => removeFromCart(id)}>-</button>
+            <input 
+                className="input" 
+                type="text" 
+                value={itemCount} />
+            <button className="change-btn"
+            onClick={() => addToCart(id)}>+</button>
         </section>
         <section className="purchase-sect">
             <Link to={'/'} className="back-btn">Back To Routes</Link>
