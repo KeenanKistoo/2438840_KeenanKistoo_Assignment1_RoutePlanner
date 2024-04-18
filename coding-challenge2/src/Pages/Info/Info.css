@@ -23,23 +23,46 @@ article.info-sect{
 .price-info{
     padding-top: 1rem;
     font-size: 2.5rem;
-    float: right;
-    margin-right: 52rem;
+    margin-left: 30rem;
 }
 
 .pur-btn{
     background-color: rgb(109, 197, 109);
-    float: right;
-    margin-right: 50rem;
+    margin-left: 35rem;
     height: 2rem;
     width: 10rem;
 
 }
 
 .back-btn{
-    background-color: rgb(228, 128, 128);
-    margin-top: 15rem;
-    margin-left: 5rem;
+    border: 1px solid black;
+    background-color: rgb(235, 169, 169);
+    color: black;
+    text-decoration: none;
+    padding: 0.4rem;
     height: 2rem;
     width: 8rem;
+    margin-left: 5rem;
+    margin-top: 40rem;
+}
+
+.input-sect{
+    margin-left: 46rem;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    width: 12rem;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(3, 33%);
+    height: 2rem;
+    justify-items: right;
+}
+
+.input{
+    width: 50%;
+}
+
+.change-btn{
+    width: 50% ;
+    
 }
