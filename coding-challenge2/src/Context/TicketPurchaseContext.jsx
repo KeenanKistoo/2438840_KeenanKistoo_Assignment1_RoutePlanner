@@ -14,28 +14,41 @@ function makeDefaultTicket(){
 
 export function TicketPurchaseContextProvider(props){
     const [ticketPurchase, setTicketPurchase] = useState(makeDefaultTicket());
-    console.log(ticketPurchase);
+    //console.log(ticketPurchase);
 
     function addToCart(id){
         let idOutput = Number(id.replace("route-", ""));
-        console.log(idOutput);
         setTicketPurchase({...ticketPurchase, [idOutput]: ticketPurchase[idOutput] + 1});
     }
 
-    function removeFromCart(id){
+    function removeFromCart(id) {
         let idOutput = Number(id.replace("route-", ""));
-        setTicketPurchase({...ticketPurchase, [idOutput]: ticketPurchase[idOutput] -1});
+        // Check if the current quantity is already zero
+        if (ticketPurchase[idOutput] === 0) {
+            // If it's zero, do not decrement further
+            return;
+        }
+        // Otherwise, decrement the quantity
+        setTicketPurchase({ ...ticketPurchase, [idOutput]: ticketPurchase[idOutput] - 1 });
     }
-
     function updateCart(id, amount){
         let idOutput = Number(id.replace("route-", ""));
         setTicketPurchase({...ticketPurchase, [idOutput]: amount})
     }
-
+    function getTotalAmount(){
+        let total = 0;
+        //console.log("ticket-purchase:", ticketPurchase[1])
+        for(let ticket in ticketPurchase){
+            total = total + (ticketPurchase[ticket] * TravelData[Number(ticket)-1].price);
+            console.log("context:" + total);
+        }
+        return total;
+    }
     const contextValues = {
         addToCart,
         removeFromCart,
         updateCart,
+        getTotalAmount,
         ticketPurchase,
     };
     return(

@@ -47,8 +47,8 @@ function Info(props){
             <button className="change-btn" onClick={() => addToCart(id)}>+</button>
         </section>
         <section className="purchase-sect">
-            <Link to={'/'} className="back-btn">Back To Routes</Link>
-            <button className="pur-btn">Add Ticket/s To Cart</button>
+            <Link to={'/'} className="back-btn">Continue Shopping</Link>
+            <button className="pur-btn">Go to cart</button>
         </section>
         </>
     );
