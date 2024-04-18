@@ -1,9 +1,10 @@
 import React from "react";
+import Info from './Info'
 
 function RouteInfo(){
     return(
         <>
-            <h1>Info</h1>
+            <Info/>
         </>
     );
 }

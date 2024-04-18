@@ -1,0 +1,45 @@
+article.info-sect{
+    margin-left: 5rem;
+    font-size: 1.2rem;
+}
+.route-head{
+    font-size: 2.8rem;
+}
+
+.desc{
+    margin-top: -2rem;
+    font-size: 1.8rem;
+}
+
+.duration{
+    margin-top: 3rem;
+
+}
+
+.stops{
+    padding-top: 1rem;
+}
+
+.price-info{
+    padding-top: 1rem;
+    font-size: 2.5rem;
+    float: right;
+    margin-right: 52rem;
+}
+
+.pur-btn{
+    background-color: rgb(109, 197, 109);
+    float: right;
+    margin-right: 50rem;
+    height: 2rem;
+    width: 8rem;
+
+}
+
+.back-btn{
+    background-color: rgb(228, 128, 128);
+    margin-top: 15rem;
+    margin-left: 5rem;
+    height: 2rem;
+    width: 8rem;
+}
