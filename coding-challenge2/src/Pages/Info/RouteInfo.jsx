@@ -11,7 +11,8 @@ function RouteInfo(){
     return(
         <>
             <Info
-            id={td[finalIndex].title}
+            id={td[finalIndex].id}
+            title={td[finalIndex].title}
             desc={td[finalIndex].description}
             duration={td[finalIndex].duration}
             stops={td[finalIndex].stops}
