@@ -48,7 +48,7 @@ function Info(props){
         </section>
         <section className="purchase-sect">
             <Link to={'/'} className="back-btn">Continue Shopping</Link>
-            <button className="pur-btn">Go to cart</button>
+            <Link to={'/cart'} className="pur-btn">Go to cart</Link>
         </section>
         </>
     );

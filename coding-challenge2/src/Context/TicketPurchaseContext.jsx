@@ -44,11 +44,16 @@ export function TicketPurchaseContextProvider(props){
         }
         return total;
     }
+
+    function completeCheckout(){
+        setTicketPurchase(makeDefaultTicket());
+    }
     const contextValues = {
         addToCart,
         removeFromCart,
         updateCart,
         getTotalAmount,
+        completeCheckout,
         ticketPurchase,
     };
     return(

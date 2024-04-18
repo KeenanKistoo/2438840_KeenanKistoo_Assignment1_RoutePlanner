@@ -9,7 +9,7 @@ function Navbar(){
             <section className="links">
                 <Link to={"/"}>Routes</Link>
                 
-                <Link to={"/purchase"}><ShoppingCart size={32}/></Link>
+                <Link to={"/cart"}><ShoppingCart size={32}/></Link>
             </section>
         </nav>
     );
