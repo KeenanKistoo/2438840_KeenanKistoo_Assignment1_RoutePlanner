@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { TicketPurchaseContext } from "../../Context/TicketPurchaseContext";
+import { Link } from "react-router-dom";
+import './Checkout.css'
 
 
 function Checkout() {
@@ -19,9 +21,12 @@ function Checkout() {
     return (
         <>
             {isLoading ? (
-                <h1>Loading...</h1>
+                <h1 className="message">Loading...</h1>
             ) : (
-                <h1 onLoad={() => completeCheckout()}>Checkout Complete</h1>
+                <section>
+                    <h1 className="complete" onLoad={() => completeCheckout()}>Checkout Complete! Enjoy your trip!</h1>
+                    <Link className="link" to={"/"}>Routes</Link>
+                </section>
             )}
         </>
     );
