@@ -12,19 +12,26 @@ function Checkout() {
         // Simulate a 2-second loading period
         const timer = setTimeout(() => {
             setIsLoading(false);
+            ClearCart()
         }, 2000);
 
         // Clear the timeout if the component unmounts before the timeout completes
         return () => clearTimeout(timer);
     }, []); // Empty dependency array to ensure effect runs only once
 
+    function ClearCart(){
+        for(let ticket in ticketPurchase){
+            ticketPurchase[ticket] = 0;
+            console.log("checkout" + ticketPurchase)
+        }
+    }
     return (
         <>
             {isLoading ? (
                 <h1 className="message">Loading...</h1>
             ) : (
                 <section>
-                    <h1 className="complete" onLoad={() => completeCheckout()}>Checkout Complete! Enjoy your trip!</h1>
+                    <h1 className="complete">Checkout Complete! Enjoy your trip!</h1>
                     <Link className="link" to={"/"}>Routes</Link>
                 </section>
             )}
