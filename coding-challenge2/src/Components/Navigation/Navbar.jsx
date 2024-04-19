@@ -7,9 +7,8 @@ function Navbar(){
     return(
         <nav className="nav-bar">
             <section className="links">
-                <Link to={"/"}>Routes</Link>
-                
-                <Link to={"/cart"}><ShoppingCart size={32}/></Link>
+                <Link to={"/"}>Routes</Link> {/**Link to the homepage */}
+                <Link to={"/cart"}><ShoppingCart size={32}/></Link> {/**Link to the cart */}
             </section>
         </nav>
     );

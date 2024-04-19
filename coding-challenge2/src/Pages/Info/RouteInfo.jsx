@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 import TravelData from '../../json_data/TravelData.json'
 
 function RouteInfo(){
-    let {id} = useParams();
-    let idOutput = id.replace("route-", "")
-    let finalIndex = idOutput - 1;
+    let {id} = useParams(); //Accessing the id of the relevant TravelData from the URL.
+    let idOutput = id.replace("route-", "") //Removing string element. 
+    let finalIndex = idOutput - 1; //Setting the element to match with the TravelData indexes.
     const td = TravelData;
     return(
         <>

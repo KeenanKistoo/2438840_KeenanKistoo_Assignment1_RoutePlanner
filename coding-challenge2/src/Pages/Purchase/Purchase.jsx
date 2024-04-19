@@ -30,7 +30,6 @@ function Purchase(){
                 .filter((ticket) => ticketPurchase[ticket] !== 0) // Filter out keys with a value of 0
                 .map((ticket) => (
                     <div className="ticket" key={ticket}>
-                        {/* Your JSX code for each ticket goes here */}
                         <h2 className="ticket-head">{td[ticket-1].title}</h2>
                         <p className="route-id">{"route-id: " + td[ticket-1].id}</p>
                         <p className="price-cart">{"Total Price: " + 'R' + (td[ticket-1].price * ticketPurchase[ticket])}</p>
@@ -42,13 +41,14 @@ function Purchase(){
                     </div>
                 ))}
                 <p className="subtotal">Subtotal: {'R' + Object.keys(ticketPurchase)
-                .filter((ticket) => ticketPurchase[ticket] !== 0)
-                .map((ticket) => td[Number(ticket) - 1].price * ticketPurchase[ticket])
-                .reduce((total, price) => total + price, 0)}</p>
-                <Link className='checkout' to='/checkout'>Checkout</Link>
+                    .filter((ticket) => ticketPurchase[ticket] !== 0)
+                    .map((ticket) => td[Number(ticket) - 1].price * ticketPurchase[ticket])
+                    .reduce((total, price) => total + price, 0)}</p>
+                    <Link className='checkout' to='/checkout'>Checkout</Link>
             </>
         ) : (
             <p className="no-items">No items in cart</p>
+            /**If no items in cart, display this message */
         )}
     </>
 

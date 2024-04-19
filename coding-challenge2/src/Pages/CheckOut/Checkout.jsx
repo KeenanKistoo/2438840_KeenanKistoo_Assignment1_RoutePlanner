@@ -19,6 +19,7 @@ function Checkout() {
         return () => clearTimeout(timer);
     }, []); // Empty dependency array to ensure effect runs only once
 
+    /**As mentioned in TicketPurchaseContext.jsx, this function is used to clear cart */
     function ClearCart(){
         for(let ticket in ticketPurchase){
             ticketPurchase[ticket] = 0;
@@ -35,6 +36,7 @@ function Checkout() {
                     <Link className="link" to={"/"}>Routes</Link>
                 </section>
             )}
+            {/**Simulated experience of a successful checkout. */}
         </>
     );
 }
