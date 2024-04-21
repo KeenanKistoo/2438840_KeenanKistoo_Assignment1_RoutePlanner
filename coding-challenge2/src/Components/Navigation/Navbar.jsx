@@ -32,7 +32,9 @@ function Navbar(){
             <section className="links">
                 <Link to={"/"}>Routes</Link> {/**Link to the homepage */}
                 <Link to={"/cart"} ><ShoppingCart size={32}/></Link> {/**Link to the cart */}
-                {/* <div className={cartFull ? "cart" : "not-full"}><Circle size={62} /></div>  */}
+                {/* <div className={cartFull ? "cart" : "not-full"}><Circle size={62} /></div>  
+                I was trying to show when there were items in the cart. 
+                Unfortunately, I was unable to implement it before the deadline.*/}
             </section>
         </nav>
     );

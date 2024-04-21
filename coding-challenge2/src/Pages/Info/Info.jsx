@@ -12,11 +12,21 @@ function Info(props){
     let idOutput = Number(id.replace("route-", ""));
     let itemCount = ticketPurchase[idOutput];
     
-// if (isNaN(idOutput)) {
-//     // Handle the case when idOutput is NaN
-//     console.error(`Invalid id: ${id}`);
-//     return null; // Or handle it differently based on your requirements
-// }
+ /*This function was added as a debug to solve a non-number
+ error I was recieving in the console. 
+
+ URL: https://www.codecademy.com/forum_questions/50324d12ae0dc90002046192#:~:text=Nan%20means%20%E2%80%9CNot%20a%20number,function%2C%20but%20getting%20it's%20contents.
+
+ The link above was where I found out what a NaN error was. 
+
+ My error was in the RouteInfo.jsx. I was referencing the title in
+ my TravelData.json instead of the ID.
+
+ if (isNaN(idOutput)) {
+     // Handle the case when idOutput is NaN
+     console.error(`Invalid id: ${id}`);
+     return null;
+ }*/
 
 
     function Test(){

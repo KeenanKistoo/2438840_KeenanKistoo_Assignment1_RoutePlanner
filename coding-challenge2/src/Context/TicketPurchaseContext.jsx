@@ -80,3 +80,14 @@ export function TicketPurchaseContextProvider(props){
  )   
 }
 
+/* Decision Making:
+My core process was trying to find the easiest way to achieve a shopping experience without
+constant referencing. 
+
+For example, instead of referencing the ticket id from the URL in other components/pages, I used idOutput
+to store and process the values here in the context. (Lines 31, 36, and 46).
+
+Another challenge I found was that the id was not an int but rather a string and a simple Number() conversion
+was not possible. parseInt was not possible until removing the rest of the string first. Eventually, I realised that
+converting the output in one line was more efficient than trying to achieve this in multiple lines. 
+*/
